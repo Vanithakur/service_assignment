@@ -1,0 +1,15 @@
+
+<app-header (featureSelected)="onNavigate($event)"></app-header> 
+<div class="container">
+    <div class="row"  *ngFor="let category of categories">
+        <div class="col-xs-12" *ngIf="loadedFeature === category['category'] || loadedFeature === ''">
+            <div class="col-sm-4">
+                <p><b>Category : {{ category['category']}}</b></p>   
+                <p><b>Product : {{ category['title']}}</b></p>
+                <p><b>Price : {{ category['price']}}</b></p>
+                <p><b>Size : {{ category['size']}}</b></p>
+            </div>
+            <div class="col-sm-4"><img [src]= "category['image']" alt="" class="img-responsive" style="max-height: 80px;"></div>
+        </div><br>
+    </div>
+</div>

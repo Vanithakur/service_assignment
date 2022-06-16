@@ -1,0 +1,25 @@
+		
+	<div class="container">
+		<div class="card">
+			<div class="container-fliud">
+				<div class="wrapper row">
+                    <div>
+                        <div class="preview col-md-4" style="width: 10% ;">
+                            <a (click)="onSelected()">
+                            <ul class="preview-thumbnail nav nav-tabs" style="width: 460px ;" *ngFor="let image of product_information.images">
+                                <li class="active"><a data-target="#pic-1" data-toggle="tab">
+                                  <img 
+                                  [src]="image"
+                                   alt="{{ image }}"></a></li>
+                              </ul>
+                            </a>
+                        </div> 
+                        <app-product-information 
+                        *ngFor="let info of product_info" [product_information]="info"></app-product-information>
+                  
+                    </div>
+                   
+				</div>
+			</div>
+		</div>
+	</div>

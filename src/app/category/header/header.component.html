@@ -1,0 +1,5 @@
+<ul class="nav justify-content-center">
+    <li class="nav-item" *ngFor="let category of productCatName">
+      <a class="nav-link" href="#" (click)="OnSelect( category['category'])">{{ category['category']}}</a>
+    </li>
+</ul>
